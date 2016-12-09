@@ -3,9 +3,9 @@ package templates
 import (
 	"bytes"
 	"github.com/gorilla/feeds"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/structure"
-	"github.com/kabukky/journey/structure/methods"
+	"github.com/YoungLiu/journey/database"
+	"github.com/YoungLiu/journey/structure"
+	"github.com/YoungLiu/journey/structure/methods"
 	"net/http"
 	"time"
 )

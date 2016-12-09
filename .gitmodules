@@ -1,3 +1,6 @@
 [submodule "content/themes/promenade"]
 	path = content/themes/promenade
 	url = https://github.com/kabukky/promenade
+[submodule "content/themes/thrall"]
+	path = content/themes/thrall
+	url = https://github.com/YoungLiu/ghost-theme-thrall.git

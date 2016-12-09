@@ -2,10 +2,10 @@ package methods
 
 import (
 	"encoding/json"
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/slug"
-	"github.com/kabukky/journey/structure"
+	"github.com/YoungLiu/journey/configuration"
+	"github.com/YoungLiu/journey/database"
+	"github.com/YoungLiu/journey/slug"
+	"github.com/YoungLiu/journey/structure"
 	"log"
 	"time"
 )

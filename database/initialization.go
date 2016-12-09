@@ -2,10 +2,10 @@ package database
 
 import (
 	"database/sql"
-	"github.com/kabukky/journey/database/migration"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/helpers"
-	"github.com/kabukky/journey/structure"
+	"github.com/YoungLiu/journey/database/migration"
+	"github.com/YoungLiu/journey/filenames"
+	"github.com/YoungLiu/journey/helpers"
+	"github.com/YoungLiu/journey/structure"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/twinj/uuid"
 	"time"
@@ -143,7 +143,7 @@ func Initialize() error {
 		return err
 	}
 	currentTime := time.Now()
-	_, err = readDB.Exec(stmtInitialization, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.CleanHyphen), currentTime, currentTime)
+	_, err = readDB.Exec(stmtInitialization, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime, uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical), currentTime, currentTime)
 	// TODO: Is Commit()/Rollback() needed for DB.Exec()?
 	if err != nil {
 		return err

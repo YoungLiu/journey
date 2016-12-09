@@ -3,15 +3,15 @@ package server
 import (
 	"encoding/json"
 	"github.com/dimfeld/httptreemux"
-	"github.com/kabukky/journey/authentication"
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/conversion"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/slug"
-	"github.com/kabukky/journey/structure"
-	"github.com/kabukky/journey/structure/methods"
-	"github.com/kabukky/journey/templates"
+	"github.com/YoungLiu/journey/authentication"
+	"github.com/YoungLiu/journey/configuration"
+	"github.com/YoungLiu/journey/conversion"
+	"github.com/YoungLiu/journey/database"
+	"github.com/YoungLiu/journey/filenames"
+	"github.com/YoungLiu/journey/slug"
+	"github.com/YoungLiu/journey/structure"
+	"github.com/YoungLiu/journey/structure/methods"
+	"github.com/YoungLiu/journey/templates"
 	"github.com/twinj/uuid"
 	"io"
 	"log"
@@ -370,7 +370,7 @@ func apiUploadHandler(w http.ResponseWriter, r *http.Request, _ map[string]strin
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
 			}
-			dst, err := os.Create(filepath.Join(filePath, strconv.FormatInt(time.Now().Unix(), 10)+"_"+uuid.Formatter(uuid.NewV4(), uuid.Clean)+filepath.Ext(part.FileName())))
+			dst, err := os.Create(filepath.Join(filePath, strconv.FormatInt(time.Now().Unix(), 10)+"_"+uuid.Formatter(uuid.NewV4(), uuid.FormatCanonical)+filepath.Ext(part.FileName())))
 			defer dst.Close()
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
